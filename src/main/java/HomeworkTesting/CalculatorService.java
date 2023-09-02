@@ -1,7 +1,6 @@
 package HomeworkTesting;
 
 import org.springframework.stereotype.Service;
-
 @Service
 public class CalculatorService {
     public int plus(int a, int b) {

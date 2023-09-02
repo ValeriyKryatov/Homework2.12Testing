@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CalculatorServiceParameterizedTest {
 
     CalculatorService service = new CalculatorService();
-
     public static List<Arguments> parameter() {
         return List.of(
                 Arguments.of(1, 2),

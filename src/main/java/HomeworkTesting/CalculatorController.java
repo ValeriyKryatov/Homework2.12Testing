@@ -27,6 +27,7 @@ public class CalculatorController {
         }
         return a + " + " + b + " = " + calculatorService.plus(a, b);
     }
+
     @GetMapping("/minus")
     public String minus(@RequestParam(name = "num1", required = false) Integer a,
                         @RequestParam(name = "num2", required = false) Integer b) {
@@ -35,6 +36,7 @@ public class CalculatorController {
         }
         return a + " - " + b + " = " + calculatorService.minus(a, b);
     }
+
     @GetMapping("/multiply")
     public String multiply(@RequestParam(name = "num1", required = false) Integer a,
                            @RequestParam(name = "num2", required = false) Integer b) {
@@ -43,6 +45,7 @@ public class CalculatorController {
         }
         return a + " * " + b + " = " + calculatorService.multiply(a, b);
     }
+
     @GetMapping("/divide")
     public String divide(@RequestParam(name = "num1", required = false) Integer a,
                          @RequestParam(name = "num2", required = false) Integer b) {

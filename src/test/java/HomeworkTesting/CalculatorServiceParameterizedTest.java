@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CalculatorServiceParameterizedTest {
 
     CalculatorService service = new CalculatorService();
+
     public static List<Arguments> parameter() {
         return List.of(
                 Arguments.of(1, 2),
@@ -29,7 +30,7 @@ public class CalculatorServiceParameterizedTest {
     }
 
     @Test
-    void testDivisionByZero() {
+    void testDivisionByZeroWithException() {
         assertThrows(IllegalArgumentException.class, () -> service.divide(2, 0));
     }
 }

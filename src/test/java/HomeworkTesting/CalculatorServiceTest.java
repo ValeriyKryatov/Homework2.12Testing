@@ -8,127 +8,127 @@ class CalculatorServiceTest {
     CalculatorService service = new CalculatorService();
 
     @Test
-    void testPlusTwoPositiveNumbers() {
+    void testPlusTwoPositiveNumbersShouldReturnPositiveNumber() {
         var actual1 = service.plus(1, 2);
         assertEquals(3, actual1);
     }
 
     @Test
-    void testPlusTwoNegativeNumbers() {
+    void testPlusTwoNegativeNumbersShouldReturnNegativeNumber() {
         var actual2 = service.plus(-1, -2);
         assertEquals(-3, actual2);
     }
 
     @Test
-    void testPlusFirstPositiveAndSecondNegativeNumber() {
+    void testPlusFirstPositiveAndSecondNegativeNumberShouldReturnNegativeNumber() {
         var actual3 = service.plus(1, -2);
         assertEquals(-1, actual3);
     }
 
     @Test
-    void testPlusFirstNegativeAndSecondPositiveNumber() {
+    void testPlusFirstNegativeAndSecondPositiveNumberShouldReturnPositiveNumber() {
         var actual4 = service.plus(-1, 2);
         assertEquals(1, actual4);
     }
 
     @Test
-    void testPlusNumbersWithZero() {
+    void testPlusNumbersWithZeroShouldReturnPositiveNumber() {
         var actual5 = service.plus(1, 0);
         assertEquals(1, actual5);
     }
 
     @Test
-    void testMinusTwoPositiveNumbers() {
+    void testMinusTwoPositiveNumbersShouldReturnNegativeNumber() {
         var actual1 = service.minus(1, 2);
         assertEquals(-1, actual1);
     }
 
     @Test
-    void testMinusTwoNegativeNumbers() {
+    void testMinusTwoNegativeNumbersShouldReturnPositiveNumber() {
         var actual2 = service.minus(-1, -2);
         assertEquals(1, actual2);
     }
 
     @Test
-    void testMinusFirstPositiveAndSecondNegativeNumber() {
+    void testMinusFirstPositiveAndSecondNegativeNumberShouldReturnPositiveNumber() {
         var actual3 = service.minus(1, -2);
         assertEquals(3, actual3);
     }
 
     @Test
-    void testMinusFirstNegativeAndSecondPositiveNumber() {
+    void testMinusFirstNegativeAndSecondPositiveNumberShouldReturnNegativeNumber() {
         var actual4 = service.minus(-1, 2);
         assertEquals(-3, actual4);
     }
 
     @Test
-    void testMinusNumbersWithZero() {
+    void testMinusNumbersWithZeroShouldReturnPositiveNumber() {
         var actual5 = service.minus(1, 0);
         assertEquals(1, actual5);
     }
 
     @Test
-    void testMultiplyTwoPositiveNumbers() {
+    void testMultiplyTwoPositiveNumbersShouldReturnPositiveNumber() {
         var actual1 = service.multiply(1, 2);
         assertEquals(2, actual1);
     }
 
     @Test
-    void testMultiplyTwoNegativeNumbers() {
+    void testMultiplyTwoNegativeNumbersShouldReturnPositiveNumber() {
         var actual2 = service.multiply(-1, -2);
         assertEquals(2, actual2);
     }
 
     @Test
-    void testMultiplyFirstPositiveAndSecondNegativeNumber() {
+    void testMultiplyFirstPositiveAndSecondNegativeNumberShouldReturnNegativeNumber() {
         var actual3 = service.multiply(1, -2);
         assertEquals(-2, actual3);
     }
 
     @Test
-    void testMultiplyFirstNegativeAndSecondPositiveNumber() {
+    void testMultiplyFirstNegativeAndSecondPositiveNumberShouldReturnNegativeNumber() {
         var actual4 = service.multiply(-1, 2);
         assertEquals(-2, actual4);
     }
 
     @Test
-    void testMultiplyNumbersWithZero() {
+    void testMultiplyNumbersWithZeroShouldReturnZero() {
         var actual5 = service.multiply(1, 0);
         assertEquals(0, actual5);
     }
 
     @Test
-    void testDivideTwoPositiveNumbers() {
+    void testDivideTwoPositiveNumbersShouldReturnPositiveNumber() {
         var actual1 = service.divide(1, 2);
         assertEquals(0.5, actual1);
     }
 
     @Test
-    void testDivideTwoNegativeNumbers() {
+    void testDivideTwoNegativeNumbersShouldReturnPositiveNumber() {
         var actual2 = service.divide(-4, -2);
         assertEquals(2, actual2);
     }
 
     @Test
-    void testDivideFirstPositiveAndSecondNegativeNumber() {
+    void testDivideFirstPositiveAndSecondNegativeNumberShouldReturnNegativeNumber() {
         var actual3 = service.divide(3, -2);
         assertEquals(-1.5, actual3);
     }
 
     @Test
-    void testDivideFirstNegativeAndSecondPositiveNumber() {
+    void testDivideFirstNegativeAndSecondPositiveNumberShouldReturnNegativeNumber() {
         var actual4 = service.divide(-6, 3);
         assertEquals(-2, actual4);
     }
 
     @Test
-    void testDivideZeroPerNumber() {
+    void testDivideZeroPerNumberShouldReturnZero() {
         var actual5 = service.divide(0, 1);
         assertEquals(0, actual5);
     }
 
     @Test
-    void testDivideNumbersToZeroWithException() {
+    void testDivideNumbersToShouldThrowException() {
         assertThrows(IllegalArgumentException.class, () -> service.divide(2, 0));
     }
 }
